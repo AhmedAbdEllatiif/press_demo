@@ -1,0 +1,282 @@
+2025-04-06 18:47:33,753 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-06 18:47:33,754 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-06 18:47:33,815 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-06 18:49:55,885 INFO /home/frappe/.local/bin/bench new-site press.local
+2025-04-06 18:50:31,043 INFO /home/frappe/.local/bin/bench new-site press.local
+2025-04-06 18:50:56,572 INFO /home/frappe/.local/bin/bench new-site press.local
+2025-04-06 19:08:51,193 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-06 19:08:51,193 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-06 19:08:51,195 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-06 19:08:51,195 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-06 19:08:51,897 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-06 19:08:52,209 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-06 19:08:52,506 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-06 19:08:52,823 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-06 19:08:53,062 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-06 19:11:06,855 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-06 19:11:07,062 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-06 19:11:07,065 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-06 19:11:07,116 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-06 19:11:07,445 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-06 19:11:07,675 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-06 19:11:07,885 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-06 19:11:08,067 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-06 19:11:08,239 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-06 19:48:40,409 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-06 19:48:40,411 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-06 19:48:40,411 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-06 19:48:40,411 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-06 19:48:40,958 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-06 19:48:41,231 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-06 19:48:41,495 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-06 19:48:41,777 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-06 19:48:42,016 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 06:28:18,331 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 06:28:18,332 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 06:28:18,333 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 06:28:18,336 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 06:28:18,751 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 06:28:19,009 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 06:28:19,196 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 06:28:19,385 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 06:28:19,571 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 06:32:05,704 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 06:32:05,840 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 06:32:05,959 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 06:32:06,049 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 06:32:06,388 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 06:32:06,643 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 06:32:06,865 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 06:32:07,091 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 06:32:07,302 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 06:35:06,806 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 06:35:06,991 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 06:35:07,053 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 06:35:07,208 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 06:35:07,487 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 06:35:07,758 INFO /home/frappe/.local/bin/bench new-site --no-mariadb-socket --admin-password=admin --db-root-password=admin --install-app press --set-default press.local
+2025-04-07 06:35:07,765 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 06:35:07,984 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 06:35:08,202 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 06:35:08,412 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 06:47:32,947 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 06:47:33,096 INFO /home/frappe/.local/bin/bench new-site --no-mariadb-socket --admin-password=admin --db-root-password=admin --install-app press --set-default press.local
+2025-04-07 06:47:33,174 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 06:47:33,182 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 06:47:33,183 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 06:47:33,661 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 06:47:33,990 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 06:47:34,224 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 06:47:34,395 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 06:47:34,594 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:28:40,884 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:28:40,887 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:28:40,891 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:28:40,891 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:28:41,649 INFO /home/frappe/.local/bin/bench new-site --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin --install-app press --set-default frontend
+2025-04-07 07:28:41,930 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:28:42,284 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:28:42,575 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:28:42,846 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:28:43,132 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:33:50,817 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:33:51,443 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:33:51,495 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:33:51,725 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:33:51,819 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:33:51,957 INFO /home/frappe/.local/bin/bench new-site --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin --install-app press --set-default frontend
+2025-04-07 07:33:52,137 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:33:52,353 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:33:52,532 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:33:52,706 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:42:46,258 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:42:46,391 INFO /home/frappe/.local/bin/bench new-site --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin --install-app press --set-default frontend
+2025-04-07 07:42:46,434 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:42:46,440 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:42:46,459 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:42:47,279 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:42:47,548 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:42:47,723 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:42:47,906 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:42:48,129 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:48:11,594 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:48:11,750 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:48:11,754 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:48:11,792 INFO /home/frappe/.local/bin/bench new-site --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin --install-app press --set-default frontend
+2025-04-07 07:48:11,797 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:48:12,200 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:48:12,420 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:48:12,595 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:48:12,765 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:48:12,931 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:49:28,375 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:49:28,608 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:49:28,649 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:49:28,661 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:49:29,009 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:49:29,238 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:49:29,257 INFO /home/frappe/.local/bin/bench new-site --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin --install-app press --set-default frontend
+2025-04-07 07:49:29,484 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:49:29,691 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:49:29,875 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:52:21,932 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:52:22,106 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:52:22,126 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:52:22,172 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:52:22,532 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:52:22,755 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:52:22,777 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 07:52:22,974 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:52:23,180 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:52:23,347 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:54:16,450 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:54:16,790 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 07:54:16,882 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:54:16,957 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:54:16,958 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:54:17,218 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:54:17,537 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:54:17,710 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:54:17,877 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:54:18,047 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:56:56,893 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:56:57,019 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 07:56:57,287 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:56:57,404 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:56:57,496 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:56:57,819 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:56:58,074 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:56:58,247 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:56:58,416 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:56:58,583 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 07:59:39,462 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 07:59:39,805 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 07:59:39,873 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 07:59:39,923 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 07:59:40,179 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 07:59:40,201 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 07:59:40,444 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 07:59:40,646 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 07:59:40,815 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 07:59:40,983 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 08:06:51,830 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 08:06:52,212 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 08:06:52,399 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 08:06:52,478 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 08:06:52,913 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 08:06:52,985 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 08:06:53,200 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 08:06:53,395 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 08:06:53,568 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 08:06:53,746 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 08:08:47,574 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 08:08:47,905 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 08:08:47,950 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 08:08:47,967 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 08:08:48,183 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 08:08:48,390 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 08:08:48,525 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 08:08:48,587 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 08:08:48,809 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 08:08:48,986 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 08:10:36,327 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 08:10:36,538 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 08:10:36,577 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 08:10:36,700 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 08:10:36,897 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 08:10:36,932 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 08:10:37,289 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 08:10:37,490 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 08:10:37,663 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 08:10:37,836 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 08:19:41,852 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 08:19:42,190 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 08:19:42,190 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 08:19:42,223 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 08:19:42,445 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 08:19:42,739 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 08:19:42,810 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 08:19:42,948 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 08:19:43,168 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 08:19:43,344 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 08:27:28,553 INFO /home/frappe/.local/bin/bench --site frontend install-app frappe
+2025-04-07 08:33:41,462 INFO /home/frappe/.local/bin/bench --site frontend install-app frappe
+2025-04-07 08:36:31,134 INFO /home/frappe/.local/bin/bench --site frontend install-app frappe
+2025-04-07 08:58:15,313 INFO /home/frappe/.local/bin/bench new-site test.local --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin
+2025-04-07 08:59:24,643 INFO /home/frappe/.local/bin/bench new-site test.local --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin
+2025-04-07 09:20:12,323 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 09:20:12,499 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 09:20:12,524 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 09:20:12,581 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 09:20:12,602 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 09:20:13,386 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 09:20:13,828 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 09:20:14,024 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 09:20:14,209 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 09:20:14,381 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 09:22:04,416 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 09:22:04,994 INFO /home/frappe/.local/bin/bench new-site frontend --mariadb-user-host-login-scope=% --admin-password=admin --db-root-password=admin
+2025-04-07 09:22:05,153 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 09:22:05,177 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 09:22:05,370 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 09:22:05,409 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 09:22:05,738 INFO /home/frappe/.local/bin/bench --site frontend install-app press
+2025-04-07 09:22:05,765 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 09:22:05,993 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 09:22:06,172 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 09:22:06,218 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 09:22:06,428 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 09:42:39,591 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 09:42:40,072 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 09:42:40,126 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 09:42:40,211 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 09:42:40,757 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 09:42:40,921 INFO /home/frappe/.local/bin/bench new-site frontend --mariadb-user-host-login-scope=% --db-root-password=admin
+2025-04-07 09:42:41,105 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 09:42:41,331 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 09:42:41,552 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 09:42:41,786 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 09:42:41,811 INFO /home/frappe/.local/bin/bench --site frontend install-app press
+2025-04-07 09:42:42,725 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 10:00:31,821 INFO /home/frappe/.local/bin/bench --site _beedfd426c94a603 migrate
+2025-04-07 10:00:58,050 INFO /home/frappe/.local/bin/bench migrate --help
+2025-04-07 10:01:59,691 INFO /home/frappe/.local/bin/bench list-sites
+2025-04-07 10:02:14,213 INFO /home/frappe/.local/bin/bench --site frontend migrate
+2025-04-07 10:02:55,289 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:03:11,875 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:05:08,661 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:05:29,774 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:10:28,295 INFO /home/frappe/.local/bin/bench --site frontend migrate
+2025-04-07 10:12:50,939 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 10:12:51,040 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 10:12:51,071 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 10:12:51,078 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 10:12:51,121 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 10:12:51,338 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 10:12:51,570 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 10:12:51,756 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 10:12:51,933 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 10:12:52,098 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 10:22:22,081 INFO /home/frappe/.local/bin/bench --site frontend migrate
+2025-04-07 10:23:34,406 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:23:46,234 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:25:46,360 INFO /home/frappe/.local/bin/bench --site frontend drop-site
+2025-04-07 10:25:46,553 INFO /home/frappe/.local/bin/bench --site frontend reinstall
+2025-04-07 10:26:29,844 INFO /home/frappe/.local/bin/bench --site frontend migrate
+2025-04-07 10:30:18,842 INFO /home/frappe/.local/bin/bench set-config -g db_host db
+2025-04-07 10:30:19,349 INFO /home/frappe/.local/bin/bench worker --queue default
+2025-04-07 10:30:19,457 INFO /home/frappe/.local/bin/bench worker --queue long
+2025-04-07 10:30:19,467 INFO /home/frappe/.local/bin/bench worker --queue short
+2025-04-07 10:30:19,727 INFO /home/frappe/.local/bin/bench set-config -gp db_port 3306
+2025-04-07 10:30:19,956 INFO /home/frappe/.local/bin/bench new-site frontend --mariadb-user-host-login-scope=% --db-root-password=admin
+2025-04-07 10:30:20,044 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2025-04-07 10:30:20,261 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2025-04-07 10:30:20,474 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2025-04-07 10:30:20,666 INFO /home/frappe/.local/bin/bench --site frontend install-app press
+2025-04-07 10:30:20,775 INFO /home/frappe/.local/bin/bench set-config -gp socketio_port 9000
+2025-04-07 10:30:22,141 INFO /home/frappe/.local/bin/bench use frontend
+2025-04-07 10:30:53,635 INFO /home/frappe/.local/bin/bench new-site frontend --db-root-password admin --mariadb-root-password admin --admin-password admin
+2025-04-07 10:31:21,106 INFO /home/frappe/.local/bin/bench reinstall --site frontend
+2025-04-07 10:31:29,893 INFO /home/frappe/.local/bin/bench reinstall frontend
+2025-04-07 10:31:52,155 INFO /home/frappe/.local/bin/bench new-site frontend --db-root-password admin --mariadb-root-password admin --admin-password admin
+2025-04-07 10:32:03,458 INFO /home/frappe/.local/bin/bench new-site frontend --db-root-password admin --mariadb-root-password admin --admin-password admin --force

@@ -1,0 +1,230 @@
+version: "3.8"
+services:
+  # TODO: Remove NGINX service in production
+  nginx:
+    image: nginx:1.19
+    command:
+      - nginx-entrypoint.sh
+    environment:
+      BACKEND: backend:8000
+      FRAPPE_SITE_NAME_HEADER: frontend
+      SOCKETIO: websocket:9000
+      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
+      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
+      UPSTREAM_REAL_IP_RECURSIVE: "off"
+      PROXY_READ_TIMEOUT: 120
+      CLIENT_MAX_BODY_SIZE: 50m
+    ports:
+      #- "18080:80"
+      - "80:80"
+      
+    volumes:
+      - /Users/ahmed/press_docker/mounts/nginx:/etc/nginx/conf.d
+      - /Users/ahmed/press_docker/mounts/nginx/nginx-entrypoint.sh:/usr/local/bin/nginx-entrypoint.sh
+      - /Users/ahmed/press_docker/mounts/nginx/frappe.conf.template:/templates/nginx/frappe.conf.template
+      - /Users/ahmed/press_docker/mounts/sites:/etc/nginx/sites
+      - /Users/ahmed/press_docker/mounts/assets:/etc/nginx/sites/assets
+    depends_on:
+      - frontend
+
+
+  backend:
+    image: press-image:latest
+    deploy:
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs
+
+  frontend:
+    image: press-image:latest      
+    deploy:
+      restart_policy:
+        condition: on-failure
+    # command:
+    #   - nginx-entrypoint.sh
+    command:
+      [
+        "/home/frappe/frappe-bench/env/bin/gunicorn",
+        "--bind",
+        "0.0.0.0:8000",
+        "--timeout",
+        "120",
+        "--workers",
+        "4",
+        "--worker-tmp-dir",
+        "/dev/shm",
+        "--preload",
+        "frappe.app:application",
+        "--log-level",
+        "DEBUG",
+      ]
+    working_dir: /home/frappe/frappe-bench/sites
+    ports:
+      - "8080:8000"
+    volumes:
+      # - nginx:/home/frappe/frappe-bench/nginx:rw
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs:rw
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites:rw
+      - /Users/ahmed/press_docker/mounts/assets:/home/frappe/frappe-bench/sites/assets:ro
+    depends_on:
+      - websocket
+      - redis-cache
+      - redis-queue
+      - redis-socketio
+
+
+  db:
+    image: mariadb:10.6
+    healthcheck:
+      test: mysqladmin ping -h localhost --password=admin
+      interval: 1s
+      retries: 15
+    deploy:
+      restart_policy:
+        condition: on-failure
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+      - --skip-innodb-read-only-compressed # Temporary fix for MariaDB 10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - /Users/ahmed/press_docker/mounts/db-data:/var/lib/mysql
+
+
+
+  configurator:
+    image: press-image:latest
+    deploy:
+      restart_policy:
+        condition: none
+    entrypoint:
+      - bash
+      - -c
+    # add redis_socketio for backward compatibility
+    command:
+      - >
+        ls -1 apps > sites/apps.txt;
+        bench set-config -g db_host $$DB_HOST;
+        bench set-config -gp db_port $$DB_PORT;
+        bench set-config -g redis_cache "redis://$$REDIS_CACHE";
+        bench set-config -g redis_queue "redis://$$REDIS_QUEUE";
+        bench set-config -g redis_socketio "redis://$$REDIS_QUEUE";
+        bench set-config -gp socketio_port $$SOCKETIO_PORT;
+    environment:
+      DB_HOST: db
+      DB_PORT: "3306"
+      REDIS_CACHE: redis-cache:6379
+      REDIS_QUEUE: redis-queue:6379
+      SOCKETIO_PORT: "9000"
+    volumes:
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs
+
+  create-site:
+    image: press-image:latest
+    deploy:
+      restart_policy:
+        condition: none
+    volumes:
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs
+    entrypoint:
+      - bash
+      - -c
+    command:
+      - >
+        pwd 
+        ls -al
+        wait-for-it -t 120 db:3306;
+        wait-for-it -t 120 redis-cache:6379;
+        wait-for-it -t 120 redis-queue:6379;
+        export start=`date +%s`;
+        until [[ -n `grep -hs ^ sites/common_site_config.json | jq -r ".db_host // empty"` ]] && \
+          [[ -n `grep -hs ^ sites/common_site_config.json | jq -r ".redis_cache // empty"` ]] && \
+          [[ -n `grep -hs ^ sites/common_site_config.json | jq -r ".redis_queue // empty"` ]];
+        do
+          echo "Waiting for sites/common_site_config.json to be created";
+          sleep 5;
+          if (( `date +%s`-start > 120 )); then
+            ls -al
+            echo "could not find sites/common_site_config.json with required keys";
+            exit 1
+          fi
+        done;
+        echo "sites/common_site_config.json found";
+        
+        if [ ! -d sites/frontend ]; then
+          echo "Site 'frontend' not found. Creating...";
+          bench new-site frontend \
+            --mariadb-user-host-login-scope='%' \
+            --db-root-password=admin;
+          bench --site frontend install-app press;
+          bench use frontend;
+        else
+          echo "Site 'frontend' already exists. Skipping creation.";
+          bench use frontend;
+        fi;
+
+
+
+
+      
+  websocket:
+    image: press-image:latest
+    command: ["node", "/home/frappe/frappe-bench/apps/frappe/socketio.js"]
+    working_dir: /home/frappe/frappe-bench
+    # ports:
+    #   - "19000:9000"
+    volumes:
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs:rw
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites:ro
+    depends_on:
+      - redis-socketio
+
+      
+  worker_default:
+    image: press-image:latest
+    command: ["bench", "worker", "--queue", "default"]
+    volumes:
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites:rw
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs:rw
+    depends_on:
+      - redis-cache
+      - redis-queue
+      - redis-socketio
+  queue-long:
+    image: press-image:latest
+    command: ["bench", "worker", "--queue", "long"]
+    volumes:
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites:rw
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs:rw
+    depends_on:
+      - redis-cache
+      - redis-queue
+      - redis-socketio
+  queue-short:
+    image: press-image:latest
+    command: ["bench", "worker", "--queue", "short"]
+    volumes:
+      - /Users/ahmed/press_docker/mounts/sites:/home/frappe/frappe-bench/sites:rw
+      - /Users/ahmed/press_docker/mounts/logs:/home/frappe/frappe-bench/logs:rw
+    depends_on:
+      - redis-cache
+      - redis-queue
+      - redis-socketio
+  redis-cache:
+    image: redis:6.0
+  redis-queue:
+    image: redis:6.0
+  redis-socketio:
+    image: redis:6.0
+
+volumes:
+  nginx:
+  logs:
+  sites:
+  assets:
